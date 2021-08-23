@@ -17,7 +17,7 @@ Further on all features and data added from the Smart mirror community and speci
 # Raspberry Pi files:
 - Magic Mirror API 
 - Magic Mirror remote API
-- temp.py : This file will take the input from the object temperature sensor and send it to a real time database using firebase. This file can be executed on raspberry start.
+- mlx90614.py: This file will take the input from the object temperature sensor and send it to a real time database using firebase. This file can be executed on raspberry start.
 
 # Local Machine files:
 - Rest of the project files.
