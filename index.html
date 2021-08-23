@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Smart Mirror</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <link rel="stylesheet" type="text/css" href="footer.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <script src="script.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Roboto&display=swap"
+      rel="stylesheet"
+    />
+   
+    <link
+      href="http://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  </head>
+     
+  <body onload='document.form1.username.focus()'>
+    <div id="curves" class="box">
+      <div id="outh"></div>
+    </div>
+
+    <div id="smile">
+      <div class="mouth">M</div>
+    </div>
+        <div class="menu-wrap">
+       <input type="checkbox" class="toggler" />
+        <div class= "hamburger">
+          <div></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<link href='https://css.gg/time.css' rel='stylesheet'>
+    <div class="page-content">
+      <h1>Connect to your Smart Mirror</h1>
+      <div class="form-container">
+        <form name = "form1" class="contact-form" action="#">
+          <label for="name">IP Address <span class="required"></span></label>
+          <input
+            type="text"
+            class="text-input"
+            name="username"
+          />
+          
+          <button class="button button5"  onclick="ValidateIPaddress(document.form1.username)">Connect</button>
+       </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="imgs/sm.jpg" alt="Avatar" />
+              </div>
+              <div class="flip-card-back">
+                <h1>Remote Access</h1>
+              Using our Website you will bring your Smart Mirror to life controlling all the options you want to show, the possibilities are endless!
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="imgs/carousel_2.jpg"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+              <div class="flip-card-back">
+                <h1>Temperature Sensor</h1>
+                Our sensor will let you know your room's temperature wherever you are!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="imgs/carousel_3.jpg" alt="Avatar" />
+              </div>
+              <div class="flip-card-back">
+                <h1> Motion Sensor</h1>
+                You can open your Smart mirror with a wave of a hand!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+function ValidateIPaddress(inputText)
+ {
+      var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+      if (inputText.value.match(ipformat))
+      {
+              document.form1.username.focus();
+              window.open('settings.html'); 
+              return true;
+      }
+      else
+      {
+          alert("You have entered an invalid IP address!");
+          document.form1.username.focus();
+          return false;
+      }
+ 
+ }
+
+ firebase
+        .database()
+        .ref("mlx90614/kkk")
+        .once("value", function (snapshot) {
+            snapshot.forEach(function (data) {
+              console.log(data.val());
+              let name = data.val().object;
+              document.getElementById("name").innerHTML = name;
+            });
+        });
+
+</script>
+ 
+  </body>
+</html>

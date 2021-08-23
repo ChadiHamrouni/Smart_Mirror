@@ -1,0 +1,224 @@
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDnZGo--Lc9CA6THqc1ThSzUOq7toeQ8eY",
+    authDomain: "mlx90614-24e6e.firebaseapp.com",
+    databaseURL: "https://mlx90614-24e6e-default-rtdb.firebaseio.com",
+    projectId: "mlx90614-24e6e",
+    storageBucket: "mlx90614-24e6e.appspot.com",
+    messagingSenderId: "162065215481",
+    appId: "1:162065215481:web:11744242f6506cedd61728",
+    measurementId: "G-CCLGSZF69S",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" type="text/css" href="menu.css" />
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <div class="menu-wrap">
+
+    <input type="checkbox" class="toggler" checked />
+
+    <div class="hamburger">
+      <div></div>
+    </div>
+    <div class="menu">
+      <a href="index.html"><i class="arrow left"></a></i>
+      <div>
+        <div>
+          <ul>
+
+
+            <div class="grid-container">
+              <div class="grid-item">
+                <h3>Power</h3>
+              </div>
+              <!--Change the IP address in the following GET/POST requests with your personal Raspberry Pi IP address or 
+              Develop These GET/POST requests for more control with the help of Magic Mirror Remote API using Postman-->
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/monitor/ON" id="on" class="myButton" ! target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/monitor/OFF" id="on" class="myButton" target="_blank">OFF</a>
+              </div>
+
+              </span>
+              <div class="grid-item">
+                <h3>Clock</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/clock/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/clock/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+              <div class="grid-item">
+                <h3>Weather</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/weather/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/weather/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+              <div class="grid-item">
+                <h3>Calendar</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/calendar/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/calendar/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+              <div class="grid-item">
+                <h3>Gmail</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/MMM-GmailFeed/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/MMM-GmailFeed/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+              <div class="grid-item">
+                <h3>News</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/newsfeed/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/newsfeed/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+              <div class="grid-item">
+                <h3>Compliments</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/compliments/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/compliments/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+
+              <div class="grid-item">
+                <h3>Temperature</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/MMM-temp-ds18b20/show" id="on" class="myButton"
+                  target="_blank">ON</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/MMM-temp-ds18b20/hide" id="on" class="myButton"
+                  target="_blank">OFF</a>
+              </div>
+
+              <div class="grid-item">
+                <h3>Hide/Show All</h3>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/all/show" id="on" class="myButton"
+                  target="_blank">Show</a>
+              </div>
+              <div class="grid-item">
+                <a href="http://192.168.1.23:8080/api/module/all/hide" id="on" class="myButton"
+                  target="_blank">Hide</a>
+              </div>
+
+              <div class="grid-item">
+                <h3>Take your temperature</h3>
+              </div>
+                  
+                 <div class="grid-item"> 
+
+                   <button id="show-message" class="myButton" >START</button>
+
+                  </div>
+             <div class="grid-item-temp"><a class="myButton-temp"><div style ="background-color: black;"> <strong id="name"></strong>°</div></a></div>
+       
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script>
+   
+ function getdata() {
+        firebase
+        .database()
+        .ref("mlx90614/kkk")
+        .once("value").then(function (snapshot) {
+            console.log(snapshot.val());
+            var name = snapshot.val().object;
+            document.getElementById("name").innerHTML = name;
+             alert('Your Temperature is ' + name + '°');
+          })
+        
+        }
+
+    function myfunction(x) {
+      if (x == 1)
+        alert("Are you sure you want to turn off your Smart Mirror?");
+    }
+  
+  //Take Temp using Button click
+
+/*const btnShowMsg = document.getElementById("show-message");
+
+btnShowMsg.addEventListener("click",function(){
+setTimeout(function (){
+ firebase
+        .database()
+        .ref("mlx90614/kkk")
+        .once("value").then(function (snapshot) {
+         
+            console.log(snapshot.val());
+            var name = snapshot.val().object;
+            document.getElementById("name").innerHTML = name;
+            alert('Your Temperature is ' + name + '°');
+          })
+
+},3000);
+
+});*/
+  </script>
+</body>
+
+</html>
