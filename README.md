@@ -21,3 +21,4 @@ Further on all features and data added from the Smart mirror community and speci
 
 # Local Machine files:
 - Rest of the project files.
+
