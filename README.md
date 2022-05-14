@@ -22,3 +22,12 @@ Further on all features and data added from the Smart mirror community and speci
 # Local Machine files:
 - Rest of the project files.
 
+# Build.
+1) Download and install the latest Node.js version:
+2) curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+3) sudo apt install -y nodejs
+4) Clone the repository and check out the master branch: git clone https://github.com/MichMich/MagicMirror
+5) Enter the repository: cd MagicMirror/
+6) Install the application: npm install --only=prod --omit=dev
+7) Make a copy of the config sample file: cp config/config.js.sample config/config.js
+8) Start the application: npm run start
