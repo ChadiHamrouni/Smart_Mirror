@@ -22,7 +22,7 @@ Further on all features and data added from the Smart mirror community and speci
 # Local Machine files:
 - Rest of the project files.
 
-# Build.
+# Build:
 1) Download and install the latest Node.js version:
 2) curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 3) sudo apt install -y nodejs
@@ -31,3 +31,13 @@ Further on all features and data added from the Smart mirror community and speci
 6) Install the application: npm install --only=prod --omit=dev
 7) Make a copy of the config sample file: cp config/config.js.sample config/config.js
 8) Start the application: npm run start
+
+# License:
+The MIT License (MIT)
+Copyright © 2016-2021 Michael Teeuw
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+The software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
